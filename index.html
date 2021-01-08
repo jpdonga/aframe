@@ -13,15 +13,32 @@
            </a-asset-items> 
         </a-assets>
          
-         <!-- Céu -->
+        <!-- Ponto de luz-->
+        <a-light
+        type="point"
+        color="#c0c0c0"
+        intensity="1.5"
+        animation="property: position;
+        from: -10 3.5 2;
+        to: 12 3.5 2;
+        dur: 5000;
+        loop:true;
+        dir: alternate;
+        easing: linear"
+        ></a-light>
+        
+        <!-- Céu -->
         <a-sky color="#000"></a-sky>
 
         <!-- Piso -->
         <a-plane color="#15212b" roughness="1" scale="1000 1000 1" repeat="2 2" rotation="-90 0 0"></a-plane>
-
+        
+         <!-- Camara -->
         <a-entity position="5 5 8">
             <a-camera></a-camera>
         </a-entity>
+        
+         <!-- Drone -->
         <a-entity
         gltf-model="#drone"
         scale="0.02 0.02 0.02"
